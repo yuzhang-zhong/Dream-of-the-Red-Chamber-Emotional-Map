@@ -1,0 +1,295 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d0b0a;
+  --foreground: #f4efe6;
+  --muted: #b9aa93;
+  --gold: #c8a45d;
+  --gold-soft: rgba(200, 164, 93, 0.2);
+  --panel: rgba(20, 12, 10, 0.76);
+  --panel-strong: rgba(16, 9, 8, 0.92);
+  --panel-border: rgba(200, 164, 93, 0.34);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(141, 114, 184, 0.16), transparent 30rem),
+    radial-gradient(circle at 76% 16%, rgba(139, 30, 30, 0.22), transparent 28rem),
+    linear-gradient(135deg, #0d0b0a 0%, #1a0f0f 48%, #0d0b0a 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.serif-title {
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", "Songti SC", serif;
+}
+
+.display-title {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.atlas-panel {
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(14px);
+}
+
+.atlas-glass {
+  border: 1px solid rgba(200, 164, 93, 0.2);
+  background: rgba(13, 11, 10, 0.58);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+}
+
+.atlas-hairline {
+  border-color: rgba(200, 164, 93, 0.18);
+  background: rgba(13, 11, 10, 0.38);
+}
+
+.gold-button {
+  border: 1px solid rgba(200, 164, 93, 0.48);
+  background: linear-gradient(135deg, rgba(200, 164, 93, 0.16), rgba(20, 12, 10, 0.72));
+  color: #f7ecd3;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.gold-button:hover {
+  border-color: rgba(214, 183, 109, 0.95);
+  background: linear-gradient(135deg, rgba(200, 164, 93, 0.25), rgba(36, 19, 19, 0.78));
+  transform: translateY(-1px);
+}
+
+.text-balance-safe {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.map-text-shadow {
+  paint-order: stroke;
+  stroke: rgba(13, 11, 10, 0.9);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.cinematic-light {
+  mix-blend-mode: screen;
+  animation: cinematic-breathe 2.8s ease-in-out infinite alternate;
+}
+
+.cinematic-particle {
+  animation: cinematic-drift 3.6s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.cinematic-caption {
+  letter-spacing: 0.18em;
+}
+
+.cinematic-raid {
+  mix-blend-mode: hard-light;
+}
+
+.cinematic-ending,
+.cinematic-dream {
+  animation-duration: 4.2s;
+}
+
+.guofeng-cloud {
+  animation: guofeng-cloud-drift 24s ease-in-out infinite alternate;
+}
+
+.guofeng-dust {
+  animation: guofeng-dust-float 4.8s ease-in-out infinite alternate;
+  box-shadow: 0 0 8px rgba(214, 183, 109, 0.42);
+}
+
+.guofeng-ripple {
+  animation: guofeng-ripple-breathe 5.4s ease-in-out infinite alternate;
+}
+
+.season-atmosphere {
+  mix-blend-mode: screen;
+}
+
+.season-float {
+  animation: season-float 7.2s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.season-leaf {
+  animation-duration: 8.8s;
+}
+
+.season-snow {
+  animation-duration: 6.8s;
+}
+
+.season-pulse {
+  animation: season-pulse 3.8s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.character-sprite {
+  animation: character-fade-in 520ms ease-out both;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.character-aura {
+  animation: character-aura-breathe 2.8s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes cinematic-breathe {
+  from {
+    opacity: 0.72;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.018);
+  }
+}
+
+@keyframes cinematic-drift {
+  from {
+    opacity: 0.28;
+    transform: translateY(3px) scale(0.92);
+  }
+
+  to {
+    opacity: 0.72;
+    transform: translateY(-8px) scale(1.08);
+  }
+}
+
+@keyframes character-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes character-aura-breathe {
+  from {
+    opacity: 0.08;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 0.2;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes season-float {
+  from {
+    opacity: 0.08;
+    transform: translate3d(-4px, -8px, 0) rotate(-5deg);
+  }
+
+  to {
+    opacity: 0.28;
+    transform: translate3d(14px, 16px, 0) rotate(14deg);
+  }
+}
+
+@keyframes season-pulse {
+  from {
+    opacity: 0.1;
+    transform: scale(0.82);
+  }
+
+  to {
+    opacity: 0.32;
+    transform: scale(1.28);
+  }
+}
+
+@keyframes guofeng-cloud-drift {
+  from {
+    transform: translateX(-4%);
+    opacity: 0.68;
+  }
+
+  to {
+    transform: translateX(5%);
+    opacity: 1;
+  }
+}
+
+@keyframes guofeng-dust-float {
+  from {
+    transform: translate3d(0, 3px, 0) scale(0.82);
+    opacity: 0.08;
+  }
+
+  to {
+    transform: translate3d(8px, -8px, 0) scale(1.16);
+    opacity: 0.26;
+  }
+}
+
+@keyframes guofeng-ripple-breathe {
+  from {
+    opacity: 0.55;
+    transform: scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
