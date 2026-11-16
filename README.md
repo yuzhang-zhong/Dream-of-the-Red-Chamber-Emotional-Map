@@ -2,6 +2,8 @@
 
 # 红楼梦情绪地景图
 
+**简体中文** · [English (full README)](README.en.md)
+
 **Dream of the Red Chamber Emotional Landscape**
 
 从第 27 回开始，看看人物和地点如何随章节变化。
@@ -54,7 +56,7 @@ npm ci
 npm run dev
 ```
 
-打开 **http://localhost:3000/atlas**。首页在 http://localhost:3000 。如果终端提示端口已被占用，请使用它实际输出的地址。
+打开 **<http://localhost:3000/atlas>**。首页在 http://localhost:3000 。如果终端提示端口已被占用，请使用它实际输出的地址。
 
 - 不需要数据库、登录系统或外部 AI API key。
 - 当前体验由仓库中的结构化内容驱动，没有在线模型推理步骤。
