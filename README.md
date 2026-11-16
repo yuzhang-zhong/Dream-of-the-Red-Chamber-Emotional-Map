@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="docs/assets/reading-flow.svg" alt="红楼梦情绪地景图阅读路径：选一回书，进入地点，循人物去向，回看关系与兴衰。这是概念示意图，不是应用截图。" width="100%" />
-</p>
+<div align="center">
 
 # 红楼梦情绪地景图
 
@@ -8,9 +6,19 @@
 
 贾府不是宅院，而是一套由爱、秩序、权力、孤独与命运构成的情绪系统。
 
-这是一个以**空间**重读《红楼梦》的交互式 Web 项目：拖动 1–120 回章节，让地点随叙事发光；沿着人物的出现、聚散与去向，观察同一座园子如何承载不同的情绪。地图是主体验，人物卡、时间线与关系图是辅助阅读层。
+[![Next.js](https://img.shields.io/badge/Next.js-16.2.4-000000)](package.json)
+[![React](https://img.shields.io/badge/React-19.2.4-149eca)](package.json)
+[![环境要求](https://img.shields.io/badge/Node.js-%E2%89%A520.9.0-339933)](REQUIREMENTS.md)
 
 [开始体验](#start) · [能探索什么](#explore) · [数据如何解释](#interpretation) · [开发与内容维护](#develop) · [English](#english)
+
+</div>
+
+<p align="center">
+  <img src="docs/assets/reading-flow.svg" alt="红楼梦情绪地景图阅读路径：选一回书，进入地点，循人物去向，回看关系与兴衰。这是概念示意图，不是应用截图。" width="100%" />
+</p>
+
+这是一个以**空间**重读《红楼梦》的交互式 Web 项目：拖动 1–120 回章节，让地点随叙事发光；沿着人物的出现、聚散与去向，观察同一座园子如何承载不同的情绪。地图是主体验，人物卡、时间线与关系图是辅助阅读层。
 
 > **阅读提示：包含全书情节与结局信息。** 这是一份解释性的文学可视化，不是原著全文检索、自动情感分析或经考证的建筑复原。上方配图是阅读路径示意，非应用截图。
 
@@ -137,3 +145,7 @@ Start at `/atlas` to scrub or play through chapters, inspect glowing places, and
 **Interpretation matters:** heat is seeded and smoothed, not inferred by a sentiment model. Character appearances combine manual entries, chapter-title aliases and fallback groups, capped at six per chapter. Character statistics inherit those limits; seasons are heuristic. The map is neither an exhaustive scholarly dataset nor an architectural reconstruction. Check the original text and your chosen edition before using its interpretations as evidence.
 
 The banner above is a conceptual reading-flow illustration, not an application screenshot.
+
+## 许可
+
+使用与再分发条款见 [`LICENSE`](LICENSE)。
