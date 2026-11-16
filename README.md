@@ -4,11 +4,9 @@
 
 **Dream of the Red Chamber Emotional Landscape**
 
-贾府不是宅院，而是一套由爱、秩序、权力、孤独与命运构成的情绪系统。
+从第 27 回开始，看看人物和地点如何随章节变化。
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.4-000000)](package.json)
-[![React](https://img.shields.io/badge/React-19.2.4-149eca)](package.json)
-[![环境要求](https://img.shields.io/badge/Node.js-%E2%89%A520.9.0-339933)](REQUIREMENTS.md)
 
 [开始体验](#start) · [能探索什么](#explore) · [数据如何解释](#interpretation) · [开发与内容维护](#develop) · [English](#english)
 
@@ -136,7 +134,7 @@ npm run build            # 生产构建
 <a id="english"></a>
 ## English overview
 
-**Read the novel as a landscape, not only a sequence of events.** This interactive project connects the 120 chapters of *Dream of the Red Chamber* with places, character annotations, curated relationships and visual atmosphere.
+This interactive project connects the 120 chapters of *Dream of the Red Chamber* with places, character annotations, curated relationships and visual atmosphere.
 
 Start at `/atlas` to scrub or play through chapters, inspect glowing places, and follow a character's annotated path. Explore `/timeline`, `/characters` and `/relations` for supporting views. The interface and literary commentary are primarily in Chinese; the novel's ending is not hidden.
 
